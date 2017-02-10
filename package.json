@@ -1,0 +1,37 @@
+{
+  "name": "cross-localhost",
+  "version": "0.1.0",
+  "description": "Webpack project to test cross-localhost server implementation via a development server proxy.",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "webpack",
+    "dev": "webpack-dev-server",
+    "lint": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/varbrad/cross-localhost.git"
+  },
+  "author": "Brad Davies",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/varbrad/cross-localhost/issues"
+  },
+  "homepage": "https://github.com/varbrad/cross-localhost#readme",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "vue": "^2.1.10",
+    "vue-router": "^2.2.0"
+  },
+  "devDependencies": {
+    "css-loader": "^0.26.1",
+    "node-sass": "^4.5.0",
+    "pug": "^2.0.0-beta11",
+    "pug-loader": "^2.3.0",
+    "sass-loader": "^5.0.1",
+    "standard": "^8.6.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
+  }
+}
