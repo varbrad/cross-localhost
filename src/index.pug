@@ -4,3 +4,8 @@ html
     meta(charset="utf-8")
   body
     #app
+      nav
+        router-link.router-link(to="/" exact) Home
+        router-link.router-link(to="/misc" exact) Misc
+      main
+        router-view

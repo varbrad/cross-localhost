@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
 module.exports = {
@@ -18,11 +19,16 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: './src/index.pug'
+    })
+  ],
   devtool: 'cheap-source-map', // Either 'source-map' or 'cheap-source-map'
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.common.js', // Vue alias for CommonJS module,
-      'axios$': 'axios/dist/axios.min.js' // Axios alias to use XMLHttpRequest
+      'vue$': 'vue/dist/vue.common.js', // Vue alias for CommonJS module
     }
   },
   devServer: {

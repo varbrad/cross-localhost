@@ -1,0 +1,9 @@
+.route-home
+  .cmb.p6.b1
+    h1 {{ message }}
+    button(@click="postMessage") Post Message
+    input(type="text" v-model="message")
+    hr
+    .messages
+      p(v-for="msg in messageLog").
+        {{ msg.text }}

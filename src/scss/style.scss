@@ -6,8 +6,78 @@
 html, body, #app {
   width: 100%;
   height: 100%;
+  line-height: 1.15;
+  font-size: 16px;
 }
 
 #app {
-  background-color: green;
+  background-color: #F8F9FA;
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+
+  > nav {
+    background-color: #ffffff;
+    border-bottom: 2px solid rgba(33, 37, 41, 0.1);
+    padding: 1rem 3rem;
+
+    > .router-link {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  > main {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+button {
+  transition: all .3s ease-out;
+  cursor: pointer;
+  background-color: #4dadf7;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 -4px 0 0 inset, rgba(33, 37, 41, 0.047) 0 1px 1px 0;
+  border-radius: 4px;
+  padding: .5rem 1rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #ffffff;
+  border: 1px solid rgba(33, 37, 41, 0.2);
+
+  &:hover {
+    background-color: darken(#4dadf7, 10%);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 0 0 inset, rgba(33, 37, 41, 0.047) 0 1px 1px 0;
+  }
+
+  &:active {
+    background-color: #f74dad;
+  }
+}
+
+input {
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 4px 0 0 inset, rgba(33, 33, 33, 0.047) 0 1px 1px 0;
+  border-radius: 4px;
+  padding: .5rem 1rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #333333;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.cmb {
+  max-width: 48rem;
+
+  &.p6 {
+    padding: 3rem;
+  }
+
+  &.b1 {
+    border: 1px solid rgba(0, 0, 0, 0.044);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 }

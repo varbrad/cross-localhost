@@ -1,15 +1,29 @@
 require('./scss/style.scss')
 
-const axios = require('axios')
-const qs = require('qs')
+const Vue = require('vue')
+const VueRouter = require('vue-router')
+Vue.use(VueRouter)
 
-axios.post('php/ajax.php', qs.stringify({
-  bob: [1, 2, 3],
-  data: 37
-}))
-.then(response => {
-  console.log(response)
+const vm = new Vue({
+  name: 'app',
+  router: new VueRouter({
+    routes: [
+      { path: '/', component: require('./routes/route-home.js') }
+    ]
+  })
 })
-.catch(error => {
-  console.log(error)
-})
+
+window.onload = () => vm.$mount('#app')
+
+// const axios = require('axios')
+// const qs = require('qs')
+
+// axios.post('php/ajax.php', qs.stringify({
+//   counter: 1
+// }))
+// .then(response => {
+//   console.log(response)
+// })
+// .catch(error => {
+//   console.log(error)
+// })
